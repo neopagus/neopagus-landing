@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoPagus - Le village agricole numérique</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f2f2f2;
+    }
+    header {
+      background-color: #1d5c2f;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .lang-selector {
+      text-align: center;
+      margin: 1rem;
+    }
+    .lang-selector button {
+      margin: 0 5px;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #1d5c2f;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .lang-selector button:hover {
+      background-color: #2b8640;
+    }
+    .content {
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+    img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NeoPagus</h1>
+    <p id="tagline">Le village agricole numérique</p>
+  </header>
+
+  <div class="lang-selector">
+    <button onclick="changeLang('fr')">FR</button>
+    <button onclick="changeLang('en')">EN</button>
+    <button onclick="changeLang('es')">ES</button>
+    <button onclick="changeLang('pt')">PT</button>
+  </div>
+
+  <div class="content">
+    <img src="https://chat.openai.com/_assets/neo-home.png" alt="NeoPagus homepage preview">
+  </div>
+
+  <script>
+    const tagline = document.getElementById('tagline');
+    const translations = {
+      fr: "Le village agricole numérique",
+      en: "The digital farming village",
+      es: "El pueblo agrícola digital",
+      pt: "A aldeia agrícola digital"
+    };
+
+    function changeLang(lang) {
+      tagline.textContent = translations[lang] || translations['fr'];
+    }
+  </script>
+</body>
+</html>
